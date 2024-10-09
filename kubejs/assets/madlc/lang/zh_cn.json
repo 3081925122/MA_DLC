@@ -1,0 +1,84 @@
+{
+    "item.madlc.shengxiudejixiejirou":"生锈的机械肌肉",
+    "madlc.tooltips.shengxiudejixiejirou":"生锈的机械肌肉，用砂纸打磨可能有惊喜",
+
+    "item.madlc.jixiejirou":"机械肌肉",
+    "madlc.tooltips.jixiejirou":"较为基础的机械肌肉",
+
+    "item.madlc.shengxiudehejinleiguzuo":"生锈的合金肋骨（左）",
+    "madlc.tooltips.shengxiudehejinleiguzuo.1":"生锈的合金肋骨，用砂纸打磨可能有惊喜",
+
+    "item.madlc.hejinleiguzuo":"合金肋骨（左）",
+    "madlc.tooltips.hejinleiguzuo.1":"合金打造的基础肋骨",
+    "madlc.tooltips.hejinleiguzuo.2":"受到伤害，减少1资源点， 使受到的伤害固定减少1",
+
+    "item.madlc.shengxiudehejinleiguyou":"生锈的合金肋骨（右）",
+    "madlc.tooltips.shengxiudehejinleiguyou.1":"生锈的合金肋骨，用砂纸打磨可能有惊喜",
+
+    "item.madlc.hejinleiguyou":"合金肋骨（右）",
+    "madlc.tooltips.hejinleiguyou.1":"合金打造的基础肋骨",
+    "madlc.tooltips.hejinleiguyou.2":"受到伤害，减少1资源点，使受到的伤害减少百分之10",
+
+    "item.madlc.jixiewei":"机械胃",
+    "jixiewei":"你可以开胸器自残来获取滋养buff",
+    "madlc.tooltips.jixiewei.1":" 如果生命值没满，消耗2资源点恢复生命，并给予滋养buff",
+
+    "item.madlc.renzaopi":"人造脾",
+    "madlc.tooltips.renzaopi":"",
+
+    "item.madlc.jixiexuebeng":"机械血泵",
+    "madlc.tooltips.jixiexuebeng":"机械造物，能够代替心脏",
+
+    "item.madlc.jixiejizhu":"机械脊柱",
+    "madlc.tooltips.jixiejizhu":"",
+
+    "item.madlc.ganbuguolvqi":"肝部过滤器",
+    "madlc.tooltips.ganbuguolvqi":"",
+
+    "item.madlc.touxiqi":"透析器",
+    "madlc.tooltips.touxiqi":"",
+
+    "item.madlc.posundeyasuoyangqizhiruwu":"破损的压缩氧气植入物",
+    "madlc.tooltips.posundeyasuoyangqizhiruwu":"破损并不严重，貌似可以修复",
+
+    "item.madlc.shengxiudexinpian":"生锈的芯片",
+    "madlc.tooltips.shengxiudexinpian":"生锈的芯片，用砂纸打磨可能有惊喜",
+
+    "item.madlc.xinpian":"芯片",
+    "madlc.tooltips.xinpian":"蕴含着部分灵魂，存在于你唯一的血肉结构——大脑之中，进行神秘的仪式脱离你孱弱的大脑吧",
+
+    "item.madlc.cpu":"中枢芯片",
+    "madlc.tooltips.cpu.1":"你已经更进一步摆脱孱弱的肉体，并且能激活，统筹全身机械器官，为你提供加成",
+    "madlc.tooltips.cpu.2":"在关闭器官界面自动触发激活效果",
+    "madlc.tooltips.cpu.3":"每个机械器官为你提供3点基础攻击力",
+    "madlc.tooltips.cpu.4":"每个机械器官为你提供3点生命值上限",
+
+    "item.madlc.jixiefatiaogai":"机械发条（改）",
+    "madlc.tooltips.jixiefatiaogai.1":"前期获取资源点最好的手段",
+    "madlc.tooltips.jixiefatiaogai.2":"奔跑时增加资源点，数量与速度有关",
+
+    "item.madlc.primitive_redstone_furnace":"简陋红石熔炉",
+    "madlc.tooltips.primitive_redstone_furnace.2":"手持煤炭右键获取50资源点",
+    "madlc.tooltips.primitive_redstone_furnace.3":"利用红石科技将煤炭转化为资源点",
+
+    "item.madlc.night_vision_device":"夜视仪",
+    "madlc.tooltips.night_vision_device.1":"消耗较高资源点，能让你在黑暗环境看的更清楚",
+    "madlc.tooltips.night_vision_device.2":"消耗50资源点提供夜视60秒buff",
+
+    "item.madlc.gearbox1":"变速齿轮（一档）",
+    "madlc.tooltips.gearbox1.1":"加速！",
+
+    "item.madlc.gearbox2":"变速齿轮（二档）",
+    "madlc.tooltips.gearbox2.1":"加速！",
+
+    "item.madlc.gearbox3":"变速齿轮（三档）",
+    "madlc.tooltips.gearbox3.1":"加速！",
+
+    "item.madlc.energy_storage":"资源点库",
+    "madlc.tooltips.energy_storage.1":"存储资源点的仓库",
+    "madlc.tooltips.energy_storage.2":"增加300资源点上限",
+
+    "item.madlc.jet_propeller_gai":"喷气推进器（升级改良）",
+    "madlc.tooltips.jet_propeller_gai.1":"隐藏在机体的喷气推进器正在给你的永恒之翼加速",
+    "madlc.tooltips.jet_propeller_gai.2":"能让你飞行"
+}
