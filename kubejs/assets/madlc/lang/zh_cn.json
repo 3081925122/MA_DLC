@@ -21,7 +21,7 @@
 
     "item.madlc.jixiewei":"机械胃",
     "jixiewei":"你可以开胸器自残来获取滋养buff",
-    "madlc.tooltips.jixiewei.1":" 如果生命值没满，消耗2资源点恢复生命，并给予滋养buff",
+    "madlc.tooltips.jixiewei.1":" 生命值没满，消耗资源点恢复生命，给予滋养buff",
 
     "item.madlc.renzaopi":"人造脾",
     "madlc.tooltips.renzaopi":"",
@@ -80,5 +80,14 @@
 
     "item.madlc.jet_propeller_gai":"喷气推进器（升级改良）",
     "madlc.tooltips.jet_propeller_gai.1":"隐藏在机体的喷气推进器正在给你的永恒之翼加速",
-    "madlc.tooltips.jet_propeller_gai.2":"能让你飞行"
+    "madlc.tooltips.jet_propeller_gai.2":"能让你飞行",
+
+    "item.madlc.magic_monverter":"魔力转化器",
+    "madlc.tooltips.magic_monverter.1":"将魔力转化为资源点，基础攻击力等属性（谁家禁字诀）",
+    "madlc.tooltips.magic_monverter.2":"每秒减少百分之1魔力值",
+    "madlc.tooltips.magic_monverter.3":"每秒增加魔力值上限的百分之5的资源点",
+    "madlc.tooltips.magic_monverter.4":"改动器官/吃激活药时，获取当前法力值上限，根据法力值上限增强自身（不会实时更新）",
+    "madlc.tooltips.magic_monverter.5":"增加魔力值上限的百分之5的基础攻击力",
+    "madlc.tooltips.magic_monverter.6":"增加魔力值上限的百分之5的暴击率",
+    "madlc.tooltips.magic_monverter.7":"增加魔力值上限的百分之10的暴击伤害"
 }

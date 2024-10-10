@@ -265,6 +265,35 @@ StartupEvents.registry('item', event => {
     .addTextLines('default',[Text.gray({"translate":"madlc.tooltips.jet_propeller_gai.1"})])
     .addTextLines('ctrl',[LEADING_SYMBOL,Text.gray({"translate":"madlc.tooltips.jet_propeller_gai.2"})])
     .build())
+    .tag('itemborders:iron')
     .tag('kubejs:machine')
     .tag('kubejs:active')
+
+    //魔力转化器 
+     registerOrgan(new Organ('madlc:magic_monverter')
+    .addScore('speed',-1)
+    .addScore('nerves', 1)
+    .addTextLines('default',[Text.gray({"translate":"madlc.tooltips.magic_monverter.1"})])
+    .addTextLines('alt',[LEADING_SYMBOL,Text.gray({"translate":"madlc.tooltips.magic_monverter.2"})])
+    .addTextLines('alt',[LEADING_SYMBOL,Text.gray({"translate":"madlc.tooltips.magic_monverter.3"})])
+    .addTextLines('ctrl',[LEADING_SYMBOL,Text.gray({"translate":"madlc.tooltips.magic_monverter.4"})])
+    .addTextLines('ctrl',[LEADING_SYMBOL,Text.gray({"translate":"madlc.tooltips.magic_monverter.5"})])
+    .addTextLines('ctrl',[LEADING_SYMBOL,Text.gray({"translate":"madlc.tooltips.magic_monverter.6"})])
+    .addTextLines('ctrl',[LEADING_SYMBOL,Text.gray({"translate":"madlc.tooltips.magic_monverter.7"})])
+    .build())
+    .tag('itemborders:iron')
+    .tag('kubejs:machine')
+    .tag('kubejs:active_only')
+    .tag('kubejs:player_tick_only');
+
+    //微型心火核心
+   /** registerOrgan(new Organ('madlc:jet_propeller_gai')
+    .addScore('speed',2)
+    .addTextLines('default',[Text.gray({"translate":"madlc.tooltips.jet_propeller_gai.1"})])
+    .addTextLines('ctrl',[LEADING_SYMBOL,Text.gray({"translate":"madlc.tooltips.jet_propeller_gai.2"})])
+    .build())
+    .tag('itemborders:iron')
+    .tag('kubejs:machine')
+    .tag('kubejs:active')
+*/
 })

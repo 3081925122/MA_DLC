@@ -18,7 +18,6 @@ create.mixing("madlc:night_vision_device",[Fluid.water(1000),'3x minecraft:nethe
 
 //资源点库
 const incomplete = 'create:incomplete_precision_mechanism'
-
 event.recipes.create.sequenced_assembly([
     Item.of('madlc:energy_storage')
   ],'create:brass_casing',[
@@ -30,4 +29,22 @@ event.recipes.create.sequenced_assembly([
     create.deploying(incomplete,[incomplete,'createaddition:capacitor'])
    ]).transitionalItem(incomplete).loops(3)
 
+//魔力转化器
+create.mechanical_crafting('madlc:magic_monverter',
+  [
+    'AAAAA',
+    'ABCBA',
+    'ADEDA',
+    'AFCFA',
+    'AAAAA'
+  ],
+  {
+    A:'create:industrial_iron_block',
+    B:'irons_spellbooks:arcane_ingot',
+    C:'kubejs:nether_star_shard',
+    D:'create:sturdy_sheet',
+    E:'create:brass_casing',
+    F:'create:precision_mechanism'
+  }
+)
 })

@@ -69,3 +69,21 @@ const  madlcorganPlayerTickStrategies = {
             }
         }
 var assign_organ_player_player_tick = Object.assign( organPlayerTickStrategies,  madlcorganPlayerTickStrategies)
+
+/**
+ * 玩家Tick秒级唯一策略
+ * 是的，这玩意是每秒而非每刻执行一次
+ * 对应.tag('kubejs:player_tick_only')
+ * @constant
+ * @type {Object<string,function(Internal.SimplePlayerEventJS, organ):void>}
+ */
+const madlcOrganPlayerTickOnlyStrategies = {
+    'madlc:magic_monverter':function(event,organ){
+        let player = event.player
+        let manaMax = player.getAttributeTotalValue('irons_spellbooks:max_mana')
+        let count = event.entity.persistentData.getInt(resourceCount)??0
+        updateResourceCount(player, count + manaMax * 0.05 )
+
+    }
+}
+var assign_organ_player_tick_only = Object.assign(organPlayerTickOnlyStrategies, madlcOrganPlayerTickOnlyStrategies);
