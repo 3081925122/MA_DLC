@@ -78,12 +78,38 @@ var assign_organ_player_player_tick = Object.assign( organPlayerTickStrategies, 
  * @type {Object<string,function(Internal.SimplePlayerEventJS, organ):void>}
  */
 const madlcOrganPlayerTickOnlyStrategies = {
+    //魔力转化器
     'madlc:magic_monverter':function(event,organ){
         let player = event.player
         let manaMax = player.getAttributeTotalValue('irons_spellbooks:max_mana')
         let count = event.entity.persistentData.getInt(resourceCount)??0
-        updateResourceCount(player, count + manaMax * 0.05 )
-
+        let magicData = getPlayerMagicData(player)
+        let manaCost = magicData.getMana()
+        updateResourceCount(player, count + manaMax * 0.01 )
+        magicData.setMana(Math.max((manaCost - manaMax * 0.02), 0))
+    },
+    //微型心火核心
+    'madlc:small_burning_heart': function (event, organ) {
+    let count = event.entity.persistentData.getInt(resourceCount) ?? 0;
+    let player = event.player;
+    if (count >= 10) {
+        if (player.hasEffect('kubejs:flaring_heart')) {
+            let effect = player.getEffect('kubejs:flaring_heart');
+            let amplifier = effect.getAmplifier();
+            let duration = effect.getDuration();
+            if (duration <= 20 * 4) {
+                player.potionEffects.add('kubejs:flaring_heart', 20 * 4, amplifier);
+                if (amplifier < 2) {
+                    player.potionEffects.add('kubejs:flaring_heart', 20 * 4, amplifier + 1);
+                }
+            }
+        }
+        else {
+            if (count >= 10)
+            player.potionEffects.add('kubejs:flaring_heart', 20 * 4, 0);
+        }
+        updateResourceCount(event.entity, count - 10);
     }
+}
 }
 var assign_organ_player_tick_only = Object.assign(organPlayerTickOnlyStrategies, madlcOrganPlayerTickOnlyStrategies);

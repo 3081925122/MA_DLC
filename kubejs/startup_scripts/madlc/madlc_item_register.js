@@ -52,6 +52,19 @@ StartupEvents.registry('item', event => {
     .tag('kubejs:bear_only')
     .tag('kubejs:rib');
 
+    //机械肋骨（左）
+    registerOrgan(new Organ('madlc:mechanical_ribs_zuo')
+    .addTextLines('default',[Text.gray({"translate":"madlc.tooltips.mechanical_ribs_zuo.1"})])
+    .addTextLines('alt',[LEADING_SYMBOL,Text.gray({"translate":"madlc.tooltips.mechanical_ribs_zuo.2"})])
+    .addTextLines('ctrl',[LEADING_SYMBOL,Text.gray({"translate":"madlc.tooltips.mechanical_ribs_zuo.3"})])
+    .addScore('defense',2)
+    .build())
+    .tag('itemborders:gold')
+    .tag('kubejs:machine')
+    .tag('kubejs:bear_only')
+    .tag('kubejs:active_only')
+    .tag('kubejs:rib');
+
 
     //生锈的合金肋骨（右）
     registerOrgan(new Organ('madlc:shengxiudehejinleiguyou')
@@ -71,6 +84,18 @@ StartupEvents.registry('item', event => {
      .tag('kubejs:bear_only')
      .tag('kubejs:rib');
  
+     //机械肋骨（右）
+    registerOrgan(new Organ('madlc:mechanical_ribs_yuo')
+    .addTextLines('default',[Text.gray({"translate":"madlc.tooltips.mechanical_ribs_yuo.1"})])
+    .addTextLines('alt',[LEADING_SYMBOL,Text.gray({"translate":"madlc.tooltips.mechanical_ribs_yuo.2"})])
+    .addTextLines('ctrl',[LEADING_SYMBOL,Text.gray({"translate":"madlc.tooltips.mechanical_ribs_yuo.3"})])
+    .addScore('defense',2)
+    .build())
+    .tag('itemborders:gold')
+    .tag('kubejs:machine')
+    .tag('kubejs:bear_only')
+    .tag('kubejs:active_only')
+    .tag('kubejs:rib');
 
     //机械胃
     registerOrgan(new Organ('madlc:jixiewei')
@@ -177,9 +202,10 @@ StartupEvents.registry('item', event => {
     .addTextLines('alt',[Text.gray({"translate":"madlc.tooltips.cpu.2"})])
     .addTextLines('ctrl',[Text.gray({"translate":"madlc.tooltips.cpu.3"})])
     .addTextLines('ctrl',[Text.gray({"translate":"madlc.tooltips.cpu.4"})])
+    .addTextLines('ctrl',[Text.gray({"translate":"madlc.tooltips.cpu.5"})])
     .addScore('health',-0.5)
     .addScore('nerves', 0.75)
-    .addScore('breath_recovery', 0.75)
+    .addScore('breath_recovery', 1)
     .addScore('strength', 0.75)
     .addScore('filtration', 0.75)
     .addScore('detoxification', 0.75)
@@ -216,6 +242,20 @@ StartupEvents.registry('item', event => {
     .build())
     .tag('kubejs:machine')
     .tag('kubejs:heart')
+    .tag('kubejs:resource')
+    .tag('kubejs:rclick_only');
+
+    //烈焰熔炉
+    registerOrgan(new Organ('madlc:flaming_furnace')
+    .addScore('health', 0.5)
+    .addScore('defense', -1.5)
+    .addTextLines('alt', [LEADING_SYMBOL, Text.gray({ "translate": "madlc.tooltips.flaming_furnace.2" })])
+    .addTextLines('default',[Text.gray({"translate":"madlc.tooltips.flaming_furnace.1"})])
+    .addTextLines('ctrl',[Text.gray({"translate":"madlc.tooltips.flaming_furnace.3"})])
+    .build())
+    .tag('kubejs:machine')
+    .tag('kubejs:heart')
+    .tag('kubejs:active')
     .tag('kubejs:resource')
     .tag('kubejs:rclick_only');
 
@@ -287,13 +327,35 @@ StartupEvents.registry('item', event => {
     .tag('kubejs:player_tick_only');
 
     //微型心火核心
-   /** registerOrgan(new Organ('madlc:jet_propeller_gai')
-    .addScore('speed',2)
-    .addTextLines('default',[Text.gray({"translate":"madlc.tooltips.jet_propeller_gai.1"})])
-    .addTextLines('ctrl',[LEADING_SYMBOL,Text.gray({"translate":"madlc.tooltips.jet_propeller_gai.2"})])
+    registerOrgan(new Organ('madlc:small_burning_heart')
+    .addScore('health',0.5)
+    .addScore('speed',0.75)
+    .addTextLines('default',[Text.gray({"translate":"madlc.tooltips.small_burning_heart.1"})])
+    .addTextLines('alt',[LEADING_SYMBOL,Text.gray({"translate":"madlc.tooltips.small_burning_heart.2"})])
     .build())
     .tag('itemborders:iron')
     .tag('kubejs:machine')
-    .tag('kubejs:active')
-*/
+    .tag('kubejs:player_tick_only');
+
+    //后备隐藏能源
+     registerOrgan(new Organ('madlc:hidden_reserve_energy')
+    .addScore('explosive',3)
+    .addTextLines('default',[Text.gray({"translate":"madlc.tooltips.hidden_reserve_energy.1"})])
+    .addTextLines('alt',[LEADING_SYMBOL,Text.gray({"translate":"madlc.tooltips.hidden_reserve_energy.2"})])
+    .addTextLines('alt',[LEADING_SYMBOL,Text.gray({"translate":"madlc.tooltips.hidden_reserve_energy.3"})])
+    .addTextLines('ctrl',[LEADING_SYMBOL,Text.gray({"translate":"madlc.tooltips.hidden_reserve_energy.4"})])
+    .build())
+    .tag('itemborders:iron')
+    .tag('kubejs:machine')
+    .tag('kubejs:active_only')
+    .tag('kubejs:key_pressed');
+
+    //多功能机械臂
+    registerOrgan(new Organ('madlc:multi_functional_robotic_arm')
+    .addScore('strength',1.5)
+    .addTextLines('ctrl',[LEADING_SYMBOL,Text.gray({"translate":"madlc.tooltips.multi_functional_robotic_arm"})])
+    .build())
+    .tag('itemborders:iron')
+    .tag('kubejs:machine')
+    .tag('kubejs:active_only');
 })
