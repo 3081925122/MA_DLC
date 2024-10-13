@@ -119,10 +119,25 @@ create.mechanical_crafting('madlc:hidden_reserve_energy',
   ],
   {
     A:'madlc:energy_storage',
-    B:Item.of('minecraft:flint_and_steel', '{Damage:0}'),
+    B:'minecraft:flint_and_steel',
     C:'minecraft:gunpowder',
     D:'witherstormmod:formidibomb',
     E:'bosses_of_mass_destruction:monolith_block',
+  }
+)
+//蒸汽机械臂
+create.mechanical_crafting('madlc:steam_powered_mechanical_arm',
+  [
+    'AAA',
+    'BCB',
+    'DED'
+  ],
+  {
+    A:'create:steam_engine',
+    B:'create:fluid_tank',
+    C:'chestcavity:piston_muscle',
+    D:'create:blaze_burner',
+    E:'iceandfire:fire_dragon_heart',
   }
 )
 })

@@ -100,7 +100,7 @@
 
     "item.madlc.magic_monverter":"魔力转化器",
     "madlc.tooltips.magic_monverter.1":"将魔力转化为资源点，基础攻击力等属性（谁家禁字诀）",
-    "madlc.tooltips.magic_monverter.2":"每秒减少百分之1魔力值",
+    "madlc.tooltips.magic_monverter.2":"每秒减少百分之2魔力值",
     "madlc.tooltips.magic_monverter.3":"每秒增加魔力值上限的百分之5的资源点",
     "madlc.tooltips.magic_monverter.4":"获取当前法力值上限，根据法力值上限增强自身,重新激活时更新加成",
     "madlc.tooltips.magic_monverter.5":"增加魔力值上限的百分之5的基础攻击力",
@@ -118,5 +118,10 @@
     "madlc.tooltips.hidden_reserve_energy.4":"激活后增加1000资源点上限",
 
     "item.madlc.multi_functional_robotic_arm":"多功能机械臂",
-    "madlc.tooltips.multi_functional_robotic_arm":"激活后为你提供3点攻击距离和触及距离"
+    "madlc.tooltips.multi_functional_robotic_arm":"激活后为你提供3点攻击距离和触及距离",
+
+    "item.madlc.steam_powered_mechanical_arm":"蒸汽机械臂",
+    "madlc.tooltips.steam_powered_mechanical_arm.1":"直至一切，燃烧殆尽",
+    "madlc.tooltips.steam_powered_mechanical_arm.2":"每个种类为资源的器官，会为你增加百分之2伤害值",
+    "madlc.tooltips.steam_powered_mechanical_arm.3":"每秒消耗2点资源点供能"
 }

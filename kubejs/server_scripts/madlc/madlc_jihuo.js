@@ -22,8 +22,18 @@ const madlcorganActiveStrategies = {
             player.getPersistentData().putBoolean('madlcjetpropellergai', true)
             player.abilities.mayfly = true
             player.onUpdateAbilities()
-    }}
+    },
 
+    //蒸汽机械臂
+    'madlc:steam_powered_mechanical_arm': function (player, organ, attributeMap) {
+            let typeMap = getPlayerChestCavityTypeMap(player)
+            let amplifier = 0
+            if (typeMap.has('kubejs:resource')) {
+                    amplifier = amplifier + typeMap.get('kubejs:resource').length
+         }
+            attributeMapValueAddition(attributeMap, global.ATTACK_UP_MULTI_BASE, amplifier * 0.02)
+    }
+}
 var assign_organ_active = Object.assign(organActiveStrategies, madlcorganActiveStrategies)
 
 /**

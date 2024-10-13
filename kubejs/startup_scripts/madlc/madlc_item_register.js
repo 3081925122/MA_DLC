@@ -16,7 +16,7 @@ StartupEvents.registry('item', event => {
         return builder
       }
 
-      //生锈的机械肌肉
+    //生锈的机械肌肉
     registerOrgan(new Organ('madlc:shengxiudejixiejirou')
     .addTextLines('default',[Text.gray({"translate":"madlc.tooltips.shengxiudejixiejirou"})])
     .addScore('strength',1.25)
@@ -49,6 +49,7 @@ StartupEvents.registry('item', event => {
     .addScore('defense',1.5)
     .build())
     .tag('kubejs:machine')
+    .tag('kubejs:resource')
     .tag('kubejs:bear_only')
     .tag('kubejs:rib');
 
@@ -61,6 +62,7 @@ StartupEvents.registry('item', event => {
     .build())
     .tag('itemborders:gold')
     .tag('kubejs:machine')
+    .tag('kubejs:resource')
     .tag('kubejs:bear_only')
     .tag('kubejs:active_only')
     .tag('kubejs:rib');
@@ -81,6 +83,7 @@ StartupEvents.registry('item', event => {
      .addScore('defense',1)
      .build())
      .tag('kubejs:machine')
+     .tag('kubejs:resource')
      .tag('kubejs:bear_only')
      .tag('kubejs:rib');
  
@@ -93,6 +96,7 @@ StartupEvents.registry('item', event => {
     .build())
     .tag('itemborders:gold')
     .tag('kubejs:machine')
+    .tag('kubejs:resource')
     .tag('kubejs:bear_only')
     .tag('kubejs:active_only')
     .tag('kubejs:rib');
@@ -105,6 +109,7 @@ StartupEvents.registry('item', event => {
     .addScore('nutrition', 1.2)
     .build())
     .tag('kubejs:machine')
+    .tag('kubejs:resource')
     .tag('kubejs:stomach')
     .tag('kubejs:player_tick')
 
@@ -266,6 +271,7 @@ StartupEvents.registry('item', event => {
     .addTextLines('ctrl',[LEADING_SYMBOL,Text.gray({"translate":"madlc.tooltips.night_vision_device.2"})])
     .build())
     .tag('kubejs:machine')
+    .tag('kubejs:resource')
     .tag('kubejs:player_tick');
 
     //变速齿轮(一档)
@@ -307,6 +313,7 @@ StartupEvents.registry('item', event => {
     .build())
     .tag('itemborders:iron')
     .tag('kubejs:machine')
+    .tag('kubejs:resource')
     .tag('kubejs:active')
 
     //魔力转化器 
@@ -323,6 +330,7 @@ StartupEvents.registry('item', event => {
     .build())
     .tag('itemborders:iron')
     .tag('kubejs:machine')
+    .tag('kubejs:resource')
     .tag('kubejs:active_only')
     .tag('kubejs:player_tick_only');
 
@@ -335,6 +343,7 @@ StartupEvents.registry('item', event => {
     .build())
     .tag('itemborders:iron')
     .tag('kubejs:machine')
+    .tag('kubejs:resource')
     .tag('kubejs:player_tick_only');
 
     //后备隐藏能源
@@ -347,6 +356,7 @@ StartupEvents.registry('item', event => {
     .build())
     .tag('itemborders:iron')
     .tag('kubejs:machine')
+    .tag('kubejs:resource')
     .tag('kubejs:active_only')
     .tag('kubejs:key_pressed');
 
@@ -358,4 +368,20 @@ StartupEvents.registry('item', event => {
     .tag('itemborders:iron')
     .tag('kubejs:machine')
     .tag('kubejs:active_only');
+
+    //蒸汽机械臂
+    registerOrgan(new Organ('madlc:steam_powered_mechanical_arm')
+    .addScore('strength',2)
+    .addScore('health',-0.25)
+    .addScore('speed',1)
+    .addTextLines('default',[Text.gray({"translate":"madlc.tooltips.steam_powered_mechanical_arm.1"})])
+    .addTextLines('ctrl',[LEADING_SYMBOL,Text.gray({"translate":"madlc.tooltips.steam_powered_mechanical_arm.2"})])
+    .addTextLines('alt',[LEADING_SYMBOL,Text.gray({"translate":"madlc.tooltips.steam_powered_mechanical_arm.3"})])
+    .build())
+    .tag('itemborders:iron')
+    .tag('kubejs:machine')
+    .tag('kubejs:resource')
+    .tag('kubejs:active')
+    .tag('kubejs:player_tick')
+    .tag('kubejs:muscle');
 })

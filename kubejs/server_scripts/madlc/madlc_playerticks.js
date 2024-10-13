@@ -66,8 +66,15 @@ const  madlcorganPlayerTickStrategies = {
                     updateResourceCount(event.entity, count - 50)
                 }
             }
-            }
+            },
+    //蒸汽机械臂
+    'madlc:steam_powered_mechanical_arm': function (event,organ){
+        let count = event.entity.persistentData.getInt(resourceCount)??0
+        if (count >= 2) {
+            updateResourceCount(event.entity, count - 2)
         }
+        }     
+}
 var assign_organ_player_player_tick = Object.assign( organPlayerTickStrategies,  madlcorganPlayerTickStrategies)
 
 /**
