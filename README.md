@@ -4,8 +4,8 @@
 # **如何下载**
 1：点击右边Releases，再点击Pre-release左边的v+数字最后点击Source就能下载了（不太熟练使用github）  
 2：加Q群153348389，群文件里有  
-3：网盘：链接：https://pan.quark.cn/s/16b6bd60f7a1  
-提取码：79cF
+3：链接：https://pan.quark.cn/s/4a7fbdab73fb  
+提取码：Fn3U
 # **如何安装**
 将文件夹解压覆盖就行了
 # **鸣谢**
