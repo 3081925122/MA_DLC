@@ -57,7 +57,7 @@ PlayerEvents.inventoryClosed((event) => {
     if (player.persistentData.contains(organActive) && player.persistentData.getInt(organActive) == 1) {
         return
     }
-    if (itemMap.has('madlc:1')|| itemMap.has('madlc:soul_chip')) {
+    if (itemMap.has('madlc:cpu1')|| itemMap.has('madlc:soul_chip')) {
         global.updatePlayerActiveStatus(event.player)
         player.persistentData.putInt(organActive, 1)
     }
