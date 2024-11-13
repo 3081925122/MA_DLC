@@ -32,5 +32,16 @@ const madlcorganRightClickedOnlyStrategies = {
         player.swing()
         event.item.shrink(1)
     },
+    //钢铁外壳
+    'madlc:steel_shell': function (event, organ) {
+        if (event.item != 'minecraft:iron_ingot') {
+            return
+        }
+        let player = event.player
+        let a = player.chestCavityInstance.organScores.getOrDefault(new ResourceLocation('chestcavity', 'iron_repair'), 0)
+            player.heal(a * 3)
+            player.swing()
+            event.item.shrink(1)
+    },
 }
 var assign_organ_right_clicked_only = Object.assign(organRightClickedOnlyStrategies, madlcorganRightClickedOnlyStrategies)

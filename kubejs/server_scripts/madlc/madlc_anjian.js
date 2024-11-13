@@ -7,6 +7,7 @@
  * @type {Object<string,function(Internal.NetworkEventJS, organ):void>}
  */
 const madlcOrganPlayerKeyPressedOnlyStrategies = {
+    //后备隐藏能源
     'madlc:hidden_reserve_energy': function (event, organ) {
         let player = event.player
         let count = player.persistentData.getInt(resourceCount)
@@ -25,6 +26,22 @@ const madlcOrganPlayerKeyPressedOnlyStrategies = {
                 entity.invulnerableTime = 0
                 updateResourceCount(player, 0)
         })
+    },
+    //金色书龙鳞片
+    'madlc:book_wyrm_scale1': function (event, organ) {
+    const player = event.player;
+    const mainHand = player.getMainHandItem();
+    if (!mainHand.isEmpty()) {
+        const currentLevel = player.xpLevel;
+        if (currentLevel >= 45) {
+            const enchantments = mainHand.getEnchantmentLevel();
+            const keys = Object.keys(enchantments);
+            if (keys.length > 0) {
+                mainHand.addEnchantment(enchantments, 8)
+                player.addXPLevels(-45);
+            }
+        }
     }
+    },
 }
 var assign_organ_player_key_pressed_only = Object.assign(organPlayerKeyPressedOnlyStrategies, madlcOrganPlayerKeyPressedOnlyStrategies);

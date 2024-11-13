@@ -19,12 +19,13 @@ const madlcorganActiveStrategies = {
 
     //喷气推进器（升级改良）
     'madlc:jet_propeller_gai': function (player, organ, attributeMap) {
-            player.getPersistentData().putBoolean('madlcjetpropellergai', true)
+        //飞行代码这里不全，搜索madlcjetpropellergai看另一部分
+            player.getPersistentData().putBoolean('madlcjetpropellergai1', true)
             player.abilities.mayfly = true
             player.onUpdateAbilities()
     },
 
-    //蒸汽机械臂
+    //动力臂
     'madlc:steam_powered_mechanical_arm': function (player, organ, attributeMap) {
             let typeMap = getPlayerChestCavityTypeMap(player)
             let amplifier = 0
@@ -32,7 +33,17 @@ const madlcorganActiveStrategies = {
                     amplifier = amplifier + typeMap.get('kubejs:resource').length
          }
             attributeMapValueAddition(attributeMap, global.ATTACK_UP_MULTI_BASE, amplifier * 0.02)
-    }
+    },
+    //玫瑰脊柱
+    'madlc:rose_quartz_spine': function (player, organ, attributeMap) {
+        let playerChestInstance = player.getChestCavityInstance()
+        let typeMap = getPlayerChestCavityTypeMap(player)
+        let amplifier = 0
+        if (typeMap.has('kubejs:rose')) {
+            amplifier += typeMap.get('kubejs:rose').length
+        }
+        playerChestInstance.organScores.put(new ResourceLocation('chestcavity', 'nerves'), new $Float(playerChestInstance.getOrganScores().get(new ResourceLocation('chestcavity', 'nerves')) + amplifier))
+    },
 }
 var assign_organ_active = Object.assign(organActiveStrategies, madlcorganActiveStrategies)
 
@@ -58,6 +69,14 @@ const madlcorganActiveOnlyStrategies = {
         let maxCount = player.persistentData.getInt(resourceCountMax) ?? defaultResourceMax
         player.persistentData.putInt(resourceCountMax, maxCount + c)
         },
+    //灵魂芯片
+    'madlc:soul_chip': function (player, organ, attributeMap) {
+        let a = maGetComputingPower(player)
+        attributeMapValueAddition(attributeMap, global.HEALTH_UP, a * 10)
+        attributeMapValueAddition(attributeMap, global.ATTACK_UP, a * 10)
+        let maxCount = player.persistentData.getInt(resourceCountMax) ?? defaultResourceMax
+        player.persistentData.putInt(resourceCountMax, maxCount + a * 100)
+    },
     //魔力转化器
        'madlc:magic_monverter':function(player,organ,attributeMap) {
         let manaMax = player.getAttributeTotalValue('irons_spellbooks:max_mana')
@@ -98,5 +117,58 @@ const madlcorganActiveOnlyStrategies = {
         attributeMapValueAddition(attributeMap, global.ATTACK_RANGE, 3)
         attributeMapValueAddition(attributeMap, global.REACH_DISTANCE, 3)
     },
+    //高级火龙心脏
+    'madlc:fire_dragon_heart1': function (player, organ, attributeMap) {
+        let typeMap = getPlayerChestCavityTypeMap(player)
+        let amplifier = 0
+        if (typeMap.has('kubejs:dragon')) {
+                amplifier = amplifier + typeMap.get('kubejs:dragon').length
+     }
+        attributeMapValueAddition(attributeMap, global.ATTACK_UP, amplifier * 20)
+        attributeMapValueAddition(attributeMap, global.FIRE_SPELL_POWER, amplifier * 0.5)
+    },
+    //高级冰龙心脏
+    'madlc:ice_dragon_heart1': function (player, organ, attributeMap) {
+        let typeMap = getPlayerChestCavityTypeMap(player)
+        let amplifier = 0
+        if (typeMap.has('kubejs:dragon')) {
+                amplifier = amplifier + typeMap.get('kubejs:dragon').length
+     }
+        attributeMapValueAddition(attributeMap, global.SPELL_POWER, amplifier * 0.25)
+        attributeMapValueAddition(attributeMap, global.ICE_SPELL_POWER, amplifier * 0.5)
+    },
+     //高级雷龙心脏
+     //飞行代码这里不全，搜索madlcjetpropellergai看另一部分
+     'madlc:lightning_dragon_heart1': function (player, organ, attributeMap) {
+        let typeMap = getPlayerChestCavityTypeMap(player)
+        let playerChest = getPlayerChestCavityItemMap(player)
+        let amplifier = 0
+        if (typeMap.has('kubejs:dragon')) {
+                amplifier = amplifier + typeMap.get('kubejs:dragon').length
+     }
+        attributeMapValueAddition(attributeMap,global.madlc_LIGHTNING_SPELL_POWER, amplifier * 0.5)
+        if (playerChest.has('madlc:fire_dragon_heart1')) {
+            if (playerChest.has('madlc:ice_dragon_heart1')) {
+                player.getPersistentData().putBoolean('madlcjetpropellergai2', true)
+                player.abilities.mayfly = true
+                player.onUpdateAbilities()
+            }
+        }
+    },
+    //可充能式不死图腾
+    'madlc:charged_totem_of_undying': function (player, organ, attributeMap) {
+        let maxCount = player.persistentData.getInt(resourceCountMax) ?? defaultResourceMax
+        player.persistentData.putInt(resourceCountMax, maxCount + 500)
+    },
+    //龙炎动力臂
+    'madlc:fire_steam_powered_mechanical_arm': function (player, organ, attributeMap) {
+        let a = maGetComputingPower(player)
+        attributeMapValueAddition(attributeMap, global.ATTACK_UP_MULTI_BASE, a * 0.2)
+},
+    //凋零动力臂
+    'madlc:storm_steam_powered_mechanical_arm': function (player, organ, attributeMap) {
+        let a = maGetComputingPower(player)
+        attributeMapValueAddition(attributeMap, global.ATTACK_UP_MULTI_BASE, a * 0.8)
+},
 }
 var assign_organ_active_only = Object.assign(organActiveOnlyStrategies, madlcorganActiveOnlyStrategies)

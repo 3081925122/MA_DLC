@@ -11,5 +11,10 @@ function getFishInWarpSubCount(itemMap, typeMap) {
             organCount = typeMap.get('kubejs:warp').length * 1 + organCount
         }
     }
+    if (itemMap.has('madlc:fish_in_food')) {
+        if (typeMap.has('kubejs:food')) {
+           organCount = typeMap.get('kubejs:food').length * 1 + organCount
+        }
+    }
     return organCount
 }
