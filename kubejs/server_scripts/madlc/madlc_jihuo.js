@@ -55,7 +55,7 @@ var assign_organ_active = Object.assign(organActiveStrategies, madlcorganActiveS
 const madlcorganActiveOnlyStrategies = {
     
     //中枢芯片
-    'madlc:cpu': function (player, organ, attributeMap) {
+    'madlc:cpu1': function (player, organ, attributeMap) {
         let typeMap = getPlayerChestCavityTypeMap(player)
         let amplifier = 0
         if (typeMap.has('kubejs:machine')) {
