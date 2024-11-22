@@ -22,14 +22,13 @@ create.mixing("madlc:night_vision_device",[Fluid.water(1000),'3x minecraft:nethe
 const incomplete = 'create:incomplete_precision_mechanism'
 //玫瑰脊柱
 event.recipes.create.sequenced_assembly([
-  Item.of('madlc:rose_quartz_spine').withChance(80.0),
-  Item.of('create:rose_quartz').withChance(20.0)
-], 'kubejs:spine_template', [
-  event.recipes.createDeploying('kubejs:incomplete_rose_quartz_dialyzer', ['kubejs:incomplete_rose_quartz_dialyzer', 'biomancy:absorption_boost']),
-  event.recipes.createCutting('kubejs:incomplete_rose_quartz_dialyzer', 'kubejs:incomplete_rose_quartz_dialyzer'),
-  event.recipes.createDeploying('kubejs:incomplete_rose_quartz_dialyzer', ['kubejs:incomplete_rose_quartz_dialyzer', 'minecraft:rose_bush']),
-  event.recipes.createDeploying('kubejs:incomplete_rose_quartz_dialyzer', ['kubejs:incomplete_rose_quartz_dialyzer', 'create:polished_rose_quartz'])
-]).transitionalItem('kubejs:incomplete_rose_quartz_dialyzer').loops(5)
+  Item.of('madlc:rose_quartz_spine')
+],'kubejs:spine_template',[
+  create.deploying(incomplete,[incomplete,'biomancy:rejuvenation_serum']),
+  create.cutting(incomplete,incomplete),
+  create.deploying(incomplete,[incomplete,'minecraft:rose_bush']),
+  create.deploying(incomplete,[incomplete,'create:polished_rose_quartz']),
+]).transitionalItem(incomplete).loops(5)
 //资源点库
 event.recipes.create.sequenced_assembly([
     Item.of('madlc:energy_storage')

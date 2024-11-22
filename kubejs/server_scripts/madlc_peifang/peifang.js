@@ -18,9 +18,9 @@ ServerEvents.recipes(event => {
         ['minecraft:iron_ingot','minecraft:redstone','minecraft:iron_ingot'],
         ['minecraft:iron_ingot','minecraft:iron_ingot','minecraft:iron_ingot']
      ]);
-     // 玻璃容器
+       // 玻璃容器
     event.shaped('madlc:glass_jar',[
-        [,'minecraft:glass',],
+        ['minecraft:glass',,'minecraft:glass'],
         ['minecraft:glass',,'minecraft:glass'],
         ['minecraft:glass','minecraft:glass','minecraft:glass']
      ]);
