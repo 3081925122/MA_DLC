@@ -1,7 +1,7 @@
 {
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
-	filename: "ma"
+	filename: "hp"
 	group: "4F4F4EA8CE67985B"
 	icon: {
 		Count: 1b
@@ -9,7 +9,7 @@
 		tag: { }
 	}
 	id: "20EE5BB3599F0BB5"
-	order_index: 1
+	order_index: 0
 	quest_links: [ ]
 	quests: [
 		{
@@ -214,17 +214,6 @@
 		}
 		{
 			dependencies: ["4160D5214C40A294"]
-			id: "6263C5EA6AA8C301"
-			tasks: [{
-				id: "2978BF5DEAE94DB8"
-				title: "功能性器官"
-				type: "checkmark"
-			}]
-			x: -16.5d
-			y: -8.5d
-		}
-		{
-			dependencies: ["6263C5EA6AA8C301"]
 			dependency_requirement: "one_completed"
 			description: ["前期最方便获取资源点的方法"]
 			id: "2AB5ABC23096B71E"
@@ -242,11 +231,11 @@
 				}
 				type: "item"
 			}]
-			x: -8.5d
+			x: -9.5d
 			y: -8.5d
 		}
 		{
-			dependencies: ["6263C5EA6AA8C301"]
+			dependencies: ["4160D5214C40A294"]
 			description: ["简陋红石熔炉的进阶器官"]
 			id: "2CA8097CBE24FED5"
 			rewards: [{
@@ -263,11 +252,11 @@
 				}
 				type: "item"
 			}]
-			x: -7.25d
+			x: -8.25d
 			y: -8.5d
 		}
 		{
-			dependencies: ["6263C5EA6AA8C301"]
+			dependencies: ["4160D5214C40A294"]
 			description: ["获取常驻夜视的器官"]
 			id: "213C83EB9B6CEA0E"
 			tasks: [{
@@ -279,11 +268,11 @@
 				}
 				type: "item"
 			}]
-			x: -6.0d
+			x: -7.0d
 			y: -8.5d
 		}
 		{
-			dependencies: ["6263C5EA6AA8C301"]
+			dependencies: ["4160D5214C40A294"]
 			description: ["加速齿轮一家"]
 			id: "5B31B054C98E5299"
 			rewards: [{
@@ -321,11 +310,11 @@
 					type: "item"
 				}
 			]
-			x: -14.75d
+			x: -16.0d
 			y: -8.5d
 		}
 		{
-			dependencies: ["6263C5EA6AA8C301"]
+			dependencies: ["4160D5214C40A294"]
 			description: ["前期增加资源点上限的好办法"]
 			id: "0DC37380E70FCC80"
 			rewards: [{
@@ -342,11 +331,11 @@
 				}
 				type: "item"
 			}]
-			x: -13.5d
+			x: -14.5d
 			y: -8.5d
 		}
 		{
-			dependencies: ["6263C5EA6AA8C301"]
+			dependencies: ["4160D5214C40A294"]
 			description: ["喷气推进器的升级改良版本，能够让你创造飞行"]
 			id: "577533A850A68E07"
 			rewards: [{
@@ -363,11 +352,11 @@
 				}
 				type: "item"
 			}]
-			x: -12.25d
+			x: -13.25d
 			y: -8.5d
 		}
 		{
-			dependencies: ["6263C5EA6AA8C301"]
+			dependencies: ["4160D5214C40A294"]
 			description: ["增加攻击距离与触及距离"]
 			id: "3C4B8E6EB744C301"
 			rewards: [{
@@ -384,11 +373,11 @@
 				}
 				type: "item"
 			}]
-			x: -4.75d
+			x: -5.75d
 			y: -8.5d
 		}
 		{
-			dependencies: ["6263C5EA6AA8C301"]
+			dependencies: ["4160D5214C40A294"]
 			description: [
 				"增加战利品的掉落"
 				"黑暗铁砧能通过两本一样的附魔书合成超出原版上限的等级"
@@ -408,11 +397,11 @@
 				}
 				type: "item"
 			}]
-			x: -11.0d
+			x: -12.0d
 			y: -8.5d
 		}
 		{
-			dependencies: ["6263C5EA6AA8C301"]
+			dependencies: ["4160D5214C40A294"]
 			description: ["提供常驻回血"]
 			id: "5B9CA2B0B4618FA4"
 			rewards: [{
@@ -429,22 +418,11 @@
 				}
 				type: "item"
 			}]
-			x: -3.5d
+			x: -4.5d
 			y: -8.5d
 		}
 		{
 			dependencies: ["4160D5214C40A294"]
-			id: "4021FE07258FC97B"
-			tasks: [{
-				id: "7940B9C251AFDDD7"
-				title: "输出/防御等器官"
-				type: "checkmark"
-			}]
-			x: -16.5d
-			y: -7.0d
-		}
-		{
-			dependencies: ["4021FE07258FC97B"]
 			id: "7063CDBFCCC3555C"
 			rewards: [{
 				id: "12A8024DDA08ABB6"
@@ -460,11 +438,11 @@
 				}
 				type: "item"
 			}]
-			x: -8.5d
-			y: -7.0d
+			x: -9.5d
+			y: -6.75d
 		}
 		{
-			dependencies: ["4021FE07258FC97B"]
+			dependencies: ["4160D5214C40A294"]
 			id: "0BDDEB79C80288AC"
 			rewards: [{
 				id: "40FEB6CF5465E0DA"
@@ -480,11 +458,11 @@
 				}
 				type: "item"
 			}]
-			x: -9.75d
-			y: -7.0d
+			x: -10.75d
+			y: -6.75d
 		}
 		{
-			dependencies: ["4021FE07258FC97B"]
+			dependencies: ["4160D5214C40A294"]
 			dependency_requirement: "one_completed"
 			id: "6F43165226E9BA22"
 			rewards: [{
@@ -501,11 +479,11 @@
 				}
 				type: "item"
 			}]
-			x: -7.25d
-			y: -7.0d
+			x: -8.25d
+			y: -6.75d
 		}
 		{
-			dependencies: ["4021FE07258FC97B"]
+			dependencies: ["4160D5214C40A294"]
 			description: ["相当于自然回蓝减少一半"]
 			id: "53CEBF3C0314BDA2"
 			rewards: [{
@@ -522,15 +500,12 @@
 				}
 				type: "item"
 			}]
-			x: -6.0d
-			y: -7.0d
+			x: -7.0d
+			y: -6.75d
 		}
 		{
-			dependencies: ["4021FE07258FC97B"]
-			description: [
-				"建议配合奥林匹斯熔炉，资源点不减反增"
-				"获取神秘饰品建议刷敲钟人，敲钟人通过制作缠魂铃铛召唤"
-			]
+			dependencies: ["4160D5214C40A294"]
+			description: ["获取神秘饰品建议刷敲钟人，敲钟人通过制作缠魂铃铛召唤"]
 			id: "10C85BBC5F2FF3FC"
 			rewards: [{
 				id: "18D640240EF7FF05"
@@ -546,11 +521,11 @@
 				}
 				type: "item"
 			}]
-			x: -14.75d
-			y: -7.0d
+			x: -16.0d
+			y: -6.75d
 		}
 		{
-			dependencies: ["4021FE07258FC97B"]
+			dependencies: ["4160D5214C40A294"]
 			description: ["增加大量资源点，按下技能按键（默认x）造成当前资源点一万倍的伤害"]
 			id: "01A118266B47916E"
 			rewards: [{
@@ -567,11 +542,11 @@
 				}
 				type: "item"
 			}]
-			x: -13.5d
-			y: -7.0d
+			x: -14.5d
+			y: -6.75d
 		}
 		{
-			dependencies: ["4021FE07258FC97B"]
+			dependencies: ["4160D5214C40A294"]
 			id: "7F2A2823AA8A820A"
 			rewards: [{
 				id: "1CC4F596AB7A8873"
@@ -587,11 +562,11 @@
 				}
 				type: "item"
 			}]
-			x: -12.25d
-			y: -7.0d
+			x: -13.25d
+			y: -6.75d
 		}
 		{
-			dependencies: ["6263C5EA6AA8C301"]
+			dependencies: ["4160D5214C40A294"]
 			id: "70EC3BEED0B9EB56"
 			rewards: [{
 				id: "256F25BC6DAC7074"
@@ -607,11 +582,11 @@
 				}
 				type: "item"
 			}]
-			x: -9.75d
+			x: -10.75d
 			y: -8.5d
 		}
 		{
-			dependencies: ["6263C5EA6AA8C301"]
+			dependencies: ["4160D5214C40A294"]
 			description: ["攻击获取资源点与魔力值，同时使掉落物增加"]
 			id: "78B0A2D19875263E"
 			rewards: [{
@@ -628,11 +603,11 @@
 				}
 				type: "item"
 			}]
-			x: 0.25d
-			y: -8.5d
+			x: -3.25d
+			y: -6.75d
 		}
 		{
-			dependencies: ["6263C5EA6AA8C301"]
+			dependencies: ["4160D5214C40A294"]
 			description: ["几乎能够精准采集任何方块"]
 			id: "7A22DDAC4CE64140"
 			rewards: [{
@@ -649,11 +624,11 @@
 				}
 				type: "item"
 			}]
-			x: -2.25d
+			x: -3.25d
 			y: -8.5d
 		}
 		{
-			dependencies: ["4021FE07258FC97B"]
+			dependencies: ["4160D5214C40A294"]
 			description: [
 				"增加红石加特林的伤害，由于bug，自身伤害消失，只能通过主手tetra武器的迅捷属性，覆盖副手的伤害"
 				"迅捷属性的获取方法"
@@ -675,11 +650,11 @@
 				}
 				type: "item"
 			}]
-			x: -11.0d
-			y: -7.0d
+			x: -12.0d
+			y: -6.75d
 		}
 		{
-			dependencies: ["4021FE07258FC97B"]
+			dependencies: ["4160D5214C40A294"]
 			description: ["增加绞肉锯的伤害"]
 			id: "23FB0F0D084C487D"
 			rewards: [{
@@ -696,8 +671,8 @@
 				}
 				type: "item"
 			}]
-			x: -4.75d
-			y: -7.0d
+			x: -5.75d
+			y: -6.75d
 		}
 		{
 			dependencies: ["6694806EA857BDE6"]
@@ -729,7 +704,7 @@
 				}
 				type: "item"
 			}]
-			x: -16.5d
+			x: -17.75d
 			y: -5.25d
 		}
 		{
@@ -750,7 +725,7 @@
 				}
 				type: "item"
 			}]
-			x: -14.75d
+			x: -16.0d
 			y: -5.25d
 		}
 		{
@@ -771,7 +746,7 @@
 				}
 				type: "item"
 			}]
-			x: -13.25d
+			x: -14.5d
 			y: -5.25d
 		}
 		{
@@ -811,7 +786,7 @@
 			y: 1.25d
 		}
 		{
-			dependencies: ["6263C5EA6AA8C301"]
+			dependencies: ["4160D5214C40A294"]
 			description: ["净化大部分debuff"]
 			id: "63BEC86EB83A09A0"
 			rewards: [{
@@ -828,7 +803,7 @@
 				}
 				type: "item"
 			}]
-			x: -1.0d
+			x: -2.0d
 			y: -8.5d
 		}
 		{
@@ -867,8 +842,8 @@
 				type: "item"
 			}]
 			title: "龙炎锻炉"
-			x: -19.5d
-			y: 3.0d
+			x: -20.0d
+			y: 5.5d
 		}
 		{
 			dependencies: ["16431CB33B320C5C"]
@@ -905,8 +880,8 @@
 				type: "item"
 			}]
 			title: "龙霜锻炉"
-			x: -18.0d
-			y: 3.0d
+			x: -18.5d
+			y: 5.5d
 		}
 		{
 			dependencies: ["16431CB33B320C5C"]
@@ -944,8 +919,8 @@
 				type: "item"
 			}]
 			title: "龙霜锻炉"
-			x: -21.25d
-			y: 3.0d
+			x: -21.5d
+			y: 5.5d
 		}
 		{
 			description: ["强烈推荐看的一部分"]
@@ -957,7 +932,7 @@
 			}]
 			title: "强烈推荐看的一部分"
 			x: -23.0d
-			y: 3.0d
+			y: 6.25d
 		}
 		{
 			dependencies: ["16431CB33B320C5C"]
@@ -972,13 +947,18 @@
 				title: "先驱者已增加召唤方式"
 				type: "checkmark"
 			}]
-			x: -14.75d
-			y: 3.0d
+			x: -17.0d
+			y: 5.5d
 		}
 		{
 			dependencies: ["16431CB33B320C5C"]
-			description: ["最终奖励为随机的三种龙蛋，注意的是，珍珠里的龙等级是随机的，运气好是一级龙，运气不好是五级龙"]
+			description: ["最终奖励为随机的三种龙蛋，注意的是，珍珠里的龙等级是随机的，运气好是一级龙，运气不好是五级龙(其实是实力有限，不知道怎么设置固定等级)"]
 			id: "6B84350D3BE5F6F1"
+			rewards: [{
+				id: "4D66E72D49D64BFD"
+				item: "lightmanscurrency:coin_gold"
+				type: "item"
+			}]
 			tasks: [{
 				id: "32EA6AB570650FBD"
 				item: {
@@ -991,8 +971,8 @@
 				type: "item"
 			}]
 			title: "三种龙蛋较为简单的获取方法"
-			x: -16.5d
-			y: 3.0d
+			x: -21.5d
+			y: 7.0d
 		}
 		{
 			description: ["如果器官没有丢失过的话，不推荐重复兑换"]
@@ -1191,7 +1171,7 @@
 				}
 				type: "item"
 			}]
-			x: -16.5d
+			x: -17.75d
 			y: -3.0d
 		}
 		{
@@ -1234,7 +1214,7 @@
 				}
 			]
 			title: "凋零玫瑰"
-			x: -14.75d
+			x: -16.0d
 			y: -3.0d
 		}
 		{
@@ -1278,7 +1258,7 @@
 				}
 			]
 			title: "风暴玫瑰"
-			x: -13.25d
+			x: -14.5d
 			y: -3.0d
 		}
 		{
@@ -1357,7 +1337,7 @@
 				}
 			]
 			title: "麦乐鸡全家桶"
-			x: -16.5d
+			x: -17.75d
 			y: -0.75d
 		}
 		{
@@ -1377,7 +1357,7 @@
 				}
 				type: "item"
 			}]
-			x: -14.75d
+			x: -16.0d
 			y: -0.75d
 		}
 		{
@@ -1397,7 +1377,7 @@
 				}
 				type: "item"
 			}]
-			x: -13.25d
+			x: -14.5d
 			y: -0.75d
 		}
 		{
@@ -1418,13 +1398,14 @@
 				}
 				type: "item"
 			}]
-			x: -11.75d
+			x: -13.0d
 			y: -0.75d
 		}
 		{
+			dependencies: ["4160D5214C40A294"]
 			description: [
 				"不会的建议查mc百科，网址https://www.mcmod.cn/"
-				"灾厄宰相不一定需要黑森林的林地府邸，部分大型建筑也能召唤，实在找不到做一个诡恶巫法珍珠挑战"
+				"灾厄宰相不一定需要黑森林的林地府邸，部分大型建筑也能召唤，实在找不到去下面兑换一个"
 				"灵魂余烬在灵魂沙峡谷击杀烈焰人获取"
 				"灵魂之心需要将灵魂鹫打残，再让他攻击玩家，就有概况“升级”，升级后会有粒子效果，击杀即可获取灵魂之心"
 				"缺少合金锭建议用矿肺，矿肺+十幸运以上挖石头能获取稀有矿蔟，粉碎轮粉碎稀有矿蔟能获取大量下界合金锭"
@@ -1469,8 +1450,8 @@
 				}
 			]
 			title: "芯片"
-			x: -18.0d
-			y: -7.75d
+			x: -21.75d
+			y: -7.5d
 		}
 		{
 			dependencies: ["16431CB33B320C5C"]
@@ -1480,119 +1461,201 @@
 				item: "goety:soul_ruby"
 				type: "item"
 			}]
-			tasks: [{
-				consume_items: true
-				count: 3L
-				id: "387077C477801EC6"
-				item: "lightmanscurrency:coin_diamond"
-				type: "item"
-			}]
-			x: -13.25d
-			y: 3.0d
-		}
-		{
-			dependencies: ["16431CB33B320C5C"]
-			description: ["风暴金属板已增加合成配方"]
-			id: "428CD1678B28DDC0"
-			rewards: [
+			tasks: [
 				{
-					id: "7AA8A42A66F8B75C"
-					item: {
-						Count: 1b
-						id: "kubejs:hpdlc_storm_metal_plate"
-						tag: { }
-					}
+					consume_items: true
+					count: 3L
+					id: "387077C477801EC6"
+					item: "lightmanscurrency:coin_diamond"
 					type: "item"
 				}
 				{
-					id: "3A6D049FA39E7C8B"
-					item: {
-						Count: 1b
-						id: "kubejs:hpdlc_storm_metal_plate"
-						tag: { }
-					}
-					type: "item"
-				}
-				{
-					id: "15B5AFC0209AF1FE"
-					item: {
-						Count: 1b
-						id: "kubejs:hpdlc_storm_metal_plate"
-						tag: { }
-					}
-					type: "item"
-				}
-				{
-					id: "25AFCB41C1E7187C"
-					item: {
-						Count: 1b
-						id: "kubejs:hpdlc_storm_metal_plate"
-						tag: { }
-					}
-					type: "item"
-				}
-				{
-					id: "68BBE1AABC0D1C6E"
-					item: {
-						Count: 1b
-						id: "kubejs:hpdlc_storm_metal_plate"
-						tag: { }
-					}
-					type: "item"
-				}
-				{
-					id: "4916ECEF6057072E"
-					item: {
-						Count: 1b
-						id: "kubejs:hpdlc_storm_metal_plate"
-						tag: { }
-					}
-					type: "item"
-				}
-				{
-					id: "7A55D02FE3A92E8A"
-					item: {
-						Count: 1b
-						id: "kubejs:hpdlc_storm_metal_plate"
-						tag: { }
-					}
-					type: "item"
-				}
-				{
-					id: "01FB6F02301C4B1C"
-					item: {
-						Count: 1b
-						id: "kubejs:hpdlc_storm_metal_plate"
-						tag: { }
-					}
-					type: "item"
-				}
-				{
-					id: "5AFB41D0233ABEC2"
-					item: {
-						Count: 1b
-						id: "kubejs:hpdlc_storm_metal_plate"
-						tag: { }
-					}
-					type: "item"
-				}
-				{
-					id: "336A61161E380F0A"
-					item: {
-						Count: 1b
-						id: "kubejs:hpdlc_storm_metal_plate"
-						tag: { }
-					}
+					consume_items: true
+					id: "7BF71B93674D35BE"
+					item: "goety:unholy_blood"
 					type: "item"
 				}
 			]
-			tasks: [{
-				consume_items: false
-				id: "1B4D24BEA9A2460E"
-				item: "witherstormmod:withered_nether_star"
+			title: "红宝石兑换"
+			x: -15.75d
+			y: 5.5d
+		}
+		{
+			dependencies: ["16431CB33B320C5C"]
+			description: ["最终奖励有风暴之星"]
+			id: "2CB66835FA4F0E91"
+			rewards: [{
+				id: "0D7B9464698C67A4"
+				item: "lightmanscurrency:coin_gold"
 				type: "item"
 			}]
-			x: -11.75d
+			tasks: [{
+				id: "346270B5927DE263"
+				item: {
+					Count: 1b
+					id: "gateways:gate_pearl"
+					tag: {
+						gateway: "hpdlc:cataclysm_family"
+					}
+				}
+				type: "item"
+			}]
+			x: -20.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["16431CB33B320C5C"]
+			description: ["最终奖励有风暴金属板"]
+			id: "5D744BCAAD91474B"
+			rewards: [{
+				id: "14460342951E0ABA"
+				item: "lightmanscurrency:coin_gold"
+				type: "item"
+			}]
+			tasks: [{
+				id: "5BC9C2D087462FA0"
+				item: {
+					Count: 1b
+					id: "gateways:gate_pearl"
+					tag: {
+						gateway: "hpdlc:bomd_family"
+					}
+				}
+				type: "item"
+			}]
+			x: -18.5d
+			y: 7.0d
+		}
+		{
+			dependencies: ["4160D5214C40A294"]
+			id: "69EB2DD5D6D9931B"
+			rewards: [{
+				id: "3C6A416FA86C7B6B"
+				item: "lightmanscurrency:coin_gold"
+				type: "item"
+			}]
+			tasks: [{
+				id: "26F2ED5DFE80A3C0"
+				item: {
+					Count: 1b
+					id: "hpdlc:newborn_dimension"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: -17.75d
+			y: -6.75d
+		}
+		{
+			dependencies: ["4160D5214C40A294"]
+			id: "37E4E8CC3655F8F0"
+			rewards: [{
+				id: "138941BC849DD8C3"
+				item: "lightmanscurrency:coin_gold"
+				type: "item"
+			}]
+			tasks: [{
+				id: "64EFB3D734801A7B"
+				item: {
+					Count: 1b
+					id: "hpdlc:chuansuo"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: -17.75d
+			y: -8.5d
+		}
+		{
+			dependencies: ["4160D5214C40A294"]
+			id: "198945B8981300BC"
+			tasks: [{
+				id: "6041ACDEA6CC2E2A"
+				item: {
+					Count: 1b
+					id: "hpdlc:pulverizer1"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: -4.5d
+			y: -6.75d
+		}
+		{
+			dependencies: ["6694806EA857BDE6"]
+			id: "4DC4D8CB48F42CA8"
+			tasks: [{
+				id: "167283F808CAC1EC"
+				title: "受咒之人系列"
+				type: "checkmark"
+			}]
+			x: -19.75d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4DC4D8CB48F42CA8"]
+			description: [
+				"建议搭配人肉宴食用"
+				"恶意碎片打凋零骷髅"
+				"黑暗宝珠打凋零,需要纳米昆虫打磨，纳米昆虫在锻造遗迹的锻造容器中"
+				"不洁之血大使徒"
+			]
+			id: "63BF0678695FFCF9"
+			rewards: [{
+				id: "1FCE05869A092DFE"
+				item: "lightmanscurrency:coin_gold"
+				type: "item"
+			}]
+			tasks: [{
+				id: "5E5E3C4312CC854F"
+				item: {
+					Count: 1b
+					id: "hpdlc:curse_origin"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: -17.75d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4DC4D8CB48F42CA8"]
+			id: "53D621D544F53093"
+			rewards: [{
+				id: "03EEADCAAB7C22BB"
+				item: "lightmanscurrency:coin_gold"
+				type: "item"
+			}]
+			tasks: [{
+				id: "2DF55966B66FD5F4"
+				item: {
+					Count: 1b
+					id: "hpdlc:cursed_soul_gai"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: -16.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4DC4D8CB48F42CA8"]
+			id: "5341DCE87806DF10"
+			rewards: [{
+				id: "19323CBCC20B964B"
+				item: "lightmanscurrency:coin_gold"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0C0439C6B683DCFF"
+				item: {
+					Count: 1b
+					id: "hpdlc:cursed_heart"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: -14.25d
 			y: 3.0d
 		}
 	]
