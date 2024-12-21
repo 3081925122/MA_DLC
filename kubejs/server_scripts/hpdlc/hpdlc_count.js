@@ -141,7 +141,10 @@ const maComputingPowerStrategies = {
     'hpdlc:newborn_dimension': function (player, organ) {
         if (organ.tag?.hpdlcforgeTimes) {
             let value = organ.tag.hpdlcforgeTimes 
-            return value + 1
+            return value
+        }
+        else{
+            return 0
         }
     },
 }
