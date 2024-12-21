@@ -7,21 +7,15 @@
     "waves": [
         {
     "entities": [
-            {
-                "entity": "dummmmmmy:target_dummy",
-                "nbt": "{KubeJSPersistentData:{champion:[\"hpdlc2\"]}}"
-            },
-            {
-              "entity": "minecraft:zombie",
-              "nbt": "{KubeJSPersistentData:{champion:[\"hpdlc1\"]}}"
-          }
-        ],
-        "modifiers": [
-            {
-                "attribute": "generic.max_health",    
-                "operation": "MULTIPLY_BASE",    
-                "value": 20000.0   
-            }
+      {"entity": "dummmmmmy:target_dummy","nbt": "{KubeJSPersistentData:{champion:[\"hpdlc2\"]}}"},
+      {"entity": "cataclysm:ancient_remnant"}
+    ],
+      "modifiers": [
+      {
+      "attribute": "generic.max_health",    
+      "operation": "MULTIPLY_BASE",    
+      "value": 20000.0   
+      }
         ],
       "rewards": [],
       "max_wave_time": 36000,

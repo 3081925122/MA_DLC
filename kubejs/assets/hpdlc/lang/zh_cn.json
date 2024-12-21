@@ -1,7 +1,11 @@
 {
     "item.hpdlc.storm_metal_ingot":"风暴合金",
+    "item.hpdlc.withered_nether_star1":"风暴之星—赝品",
+    "item.hpdlc.storm_metal_plate1":"风暴金属板—赝品",
     "hpdlc.dragon_attack":"龙袭",
+    "hpdlc.cataclysm_family":"灾变全家桶",
     "hpdlc.bellringer_vengeance":"敲钟人的复仇",
+    "hpdlc.bomd_family":"祸乱鬼魅",
     "hpdlc.tooltips.hpdlc_storm":"风暴",
     "hpdlc.tooltips.hpdlc_dimension":"世界",
     "hpdlc.tooltips.hpdlc_curse":"诅咒",
@@ -124,19 +128,21 @@
     "item.hpdlc.jet_propeller_gai":"喷气推进器（升级改良）",
     "hpdlc.tooltips.jet_propeller_gai.1":"隐藏在机体的喷气推进器正在给你的永恒之翼加速",
     "hpdlc.tooltips.jet_propeller_gai.2":"能让你飞行",
-    "hpdlc.tooltips.jet_propeller_gai.3":"飞行时造成的伤害减少",
+    "hpdlc.tooltips.jet_propeller_gai.3":"飞行时造成的伤害减少,并且每秒减少30资源点",
 
     "item.hpdlc.magic_monverter":"魔力转化器",
     "hpdlc.tooltips.magic_monverter.1":"将魔力转化为资源点",
     "hpdlc.tooltips.magic_monverter.2":"每秒减少百分之1魔力值",
-    "hpdlc.tooltips.magic_monverter.3":"每秒增加魔力值上限的百分之5的资源点",
+    "hpdlc.tooltips.magic_monverter.3":"每秒增加魔力值上限的百分之1的资源点",
     "hpdlc.tooltips.magic_monverter.4":"获取当前法力值上限，根据法力值上限增强自身,重新激活时更新加成",
     "hpdlc.tooltips.magic_monverter.6":"增加魔力值上限的百分之5的暴击率",
     "hpdlc.tooltips.magic_monverter.7":"增加魔力值上限的百分之10的暴击伤害",
 
     "item.hpdlc.small_burning_heart":"微型心火核心",
     "hpdlc.tooltips.small_burning_heart.1":"我将点燃心海",
-    "hpdlc.tooltips.small_burning_heart.2":"如果机械词条器官大于10，每秒消耗10点资源点，给予四秒心火buff，最高三级",
+    "hpdlc.tooltips.small_burning_heart.2":"资源点大于百分之80，每秒消耗150资源点，并获取3级心火buff",
+    "hpdlc.tooltips.small_burning_heart.3":"资源点大于百分之50，每秒消耗100资源点，并获取2级心火buff",
+    "hpdlc.tooltips.small_burning_heart.4":"资源点大于50，每秒消耗50资源点，并获取1级心火buff",
 
     "item.hpdlc.hidden_reserve_energy":"后备隐藏能源",
     "hpdlc.tooltips.hidden_reserve_energy.1":"他妈的跟你爆了！",
@@ -380,8 +386,8 @@
 
     "item.hpdlc.cursed_heart":"受咒之心",
     "hpdlc.tooltips.cursed_heart.1":"你受到了诅咒",
-    "hpdlc.tooltips.cursed_heart.2":"盔甲主副手武器每级诅咒增加百分之2的伤害",
-    "hpdlc.tooltips.cursed_heart.3":"盔甲主副手武器每种诅咒增加百分之5的伤害",
+    "hpdlc.tooltips.cursed_heart.2":"盔甲主副手武器每级诅咒增加百分之1的伤害",
+    "hpdlc.tooltips.cursed_heart.3":"盔甲主副手武器每种诅咒增加百分之0.5的伤害",
 
     "item.hpdlc.pulverizer1":"粉碎机",
     "hpdlc.tooltips.pulverizer1.1":"诅咒缠身，悲风满路",
