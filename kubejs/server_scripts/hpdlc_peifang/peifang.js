@@ -14,10 +14,6 @@ ServerEvents.recipes(event => {
         ['minecraft:prismarine_crystals','minecraft:diamond_block','minecraft:prismarine_crystals'],
         ['minecraft:prismarine_shard','minecraft:prismarine_crystals','minecraft:prismarine_shard']
     ]);
-     //风暴金属板
-     event.shapeless(Item.of('kubejs:hpdlc_storm_metal_plate',16),[
-        'witherstormmod:withered_nether_star'
-    ]);
     //压缩氧气植入物
     event.shaped('kubejs:compressed_oxygen_implant',[
          ['hpdlc:posundeyasuoyangqizhiruwu','minecraft:iron_ingot','hpdlc:posundeyasuoyangqizhiruwu'],
@@ -77,9 +73,9 @@ ServerEvents.recipes(event => {
 
     //喷气推进器（升级改良）
     event.shaped('hpdlc:jet_propeller_gai',[
-        ['cataclysm:ignitium_ingot','minecraft:phantom_membrane','cataclysm:ignitium_ingot'],
+        ['cataclysm:ignitium_ingot','create:encased_fan','cataclysm:ignitium_ingot'],
         ['irons_spellbooks:dragonskin','nameless_trinkets:ethereal_wings','irons_spellbooks:dragonskin'],
-        ['minecraft:phantom_membrane','kubejs:jet_propeller','minecraft:phantom_membrane']
+        ['create:encased_fan','kubejs:jet_propeller','create:encased_fan']
     ])
     //高级冰龙心脏
     event.shaped('hpdlc:ice_dragon_heart1',[
@@ -167,6 +163,38 @@ ServerEvents.recipes(event => {
     //输出
     .itemOutput(Item.of('gateways:gate_pearl', '{gateway:"hpdlc:bellringer_vengeance"}'))
     .recipeTime(500);
+
+     //灾变全家桶
+     event.recipes.summoningrituals
+     //催化剂
+     .altar('kubejs:ritual_catalyst')
+     //复制时id记得改
+     .id('hpdlc:cataclysm_family')
+     //配方
+     .input('cataclysm:monstrous_horn')
+     .input('cataclysm:witherite_ingot')
+     .input('cataclysm:necklace_of_the_desert')
+     .input('cataclysm:burning_ashes')
+     .input('cataclysm:void_core')
+     //输出
+     .itemOutput(Item.of('gateways:gate_pearl', '{gateway:"hpdlc:cataclysm_family"}'))
+     .recipeTime(500);
+
+     //祸乱鬼魅珍珠
+     event.recipes.summoningrituals
+     //催化剂
+     .altar('kubejs:ritual_catalyst')
+     //复制时id记得改
+     .id('hpdlc:bomd_family')
+     //配方
+     .input('bosses_of_mass_destruction:obsidian_heart')
+     .input('4x bosses_of_mass_destruction:soul_star')
+     .input('bosses_of_mass_destruction:void_thorn')
+     .input('bosses_of_mass_destruction:blazing_eye')
+     .input('2x bosses_of_mass_destruction:brimstone_nectar')
+     //输出
+     .itemOutput(Item.of('gateways:gate_pearl', '{gateway:"hpdlc:bomd_family"}'))
+     .recipeTime(500);
 
     //诅咒？恩赐？
     event.recipes.summoningrituals

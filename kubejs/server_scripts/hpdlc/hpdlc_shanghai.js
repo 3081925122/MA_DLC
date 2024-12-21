@@ -68,12 +68,12 @@ const hpdlcOrganPlayerDamageOnlyStrategies = {
 //微型分解工厂
 'hpdlc:micro_processing_factory': function (event, organ, data) {
     let player = event.source.player
-    let count = event.entity.persistentData.getInt(resourceCount)??0
+    let count = player.persistentData.getInt(resourceCount)??0
     if (player.getCooldowns().isOnCooldown(Item.of(organ.id))) {
         return
     }
     player.addItemCooldown(organ.id, 2)
-    updateResourceCount(event.entity, count + 30)
+    updateResourceCount(player, count + 30)
     getPlayerMagicData(player).addMana(30)
 },
 //魂火
@@ -163,7 +163,7 @@ const hpdlcOrganPlayerDamageOnlyStrategies = {
     let luck = Math.max(player.getLuck(),1)
     let random = Math.random() * (100 + luck)
     let valuemax = attriMap.get(global.hpdlc_TEMP_ATTACK_UP.name)
-    let countmax = attriMap.get(global.hpdlc_TEMP_MAX_MANA.name) 
+    let countmax = attriMap.get(global.hpdlc_TEMP_MAX_MANA.name)
     //临时攻击力
     let value
         if (random<=50) {
@@ -261,7 +261,7 @@ const hpdlcOrganPlayerDamageOnlyStrategies = {
                 }
             })
         })
-    event.amount =event.amount * (1 + curseType * 0.05 + allCurseLevel * 0.02)
+    event.amount =event.amount * (1 + curseType * 0.01 + allCurseLevel * 0.005)
     },
 
 

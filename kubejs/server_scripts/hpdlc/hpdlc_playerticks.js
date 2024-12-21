@@ -101,21 +101,21 @@ const  hpdlcorganPlayerTickStrategies = {
             updateResourceCount(event.entity, count - 8)
         }
         else{
-            if (player.hasEffect('witherstormmod:wither_sickness')) {
+            if (player.hasEffect('minecraft:wither')) {
                 // 获取已有效果
-                let effect = player.getEffect('witherstormmod:wither_sickness')
+                let effect = player.getEffect('minecraft:wither')
                 // 获取效果等级
                 let amplifier = effect.getAmplifier()
                 // 获取效果时长
                 let duration = effect.getDuration()
                 if (duration <= 20 * 60){
                 // 增加效果
-                player.potionEffects.add('witherstormmod:wither_sickness', duration + 20 * 60, amplifier)
+                player.potionEffects.add('minecraft:wither', duration + 20 * 60, amplifier)
             }}
             // 否则执行以下逻辑
             else { 
                 // 增加效果
-                player.potionEffects.add('witherstormmod:wither_sickness', 20 * 60, 0)
+                player.potionEffects.add('minecraft:wither', 20 * 60, 0)
             }
         }
         },
@@ -160,35 +160,28 @@ const hpdlcOrganPlayerTickOnlyStrategies = {
         let count = event.entity.persistentData.getInt(resourceCount)??0
         let magicData = getPlayerMagicData(player)
         let manaCost = magicData.getMana()
-        updateResourceCount(player, count + manaMax * 0.05 )
+        updateResourceCount(player, count + manaMax * 0.01 )
         magicData.setMana(Math.max((manaCost - manaMax * 0.01), 0))
     },
 //微型心火核心
     'hpdlc:small_burning_heart': function (event, organ) {
     let player = event.player;
-    let count = event.entity.persistentData.getInt(resourceCount) ?? 0
-    let machinecount = 0
-    if (typeMap.has('kubejs:machine')) {
-        machinecount = machinecount + typeMap.get('kubejs:machine').length}
-    if (machinecount < 10)return
-    if (count >= 10) {
-        if (player.hasEffect('kubejs:flaring_heart')) {
-            let effect = player.getEffect('kubejs:flaring_heart');
-            let amplifier = effect.getAmplifier();
-            let duration = effect.getDuration();
-        if (amplifier >= 3) return
-            if (duration <= 20 * 4) {
-                player.potionEffects.add('kubejs:flaring_heart', 20 * 4, amplifier);
-                if (amplifier < 2) {
-                    player.potionEffects.add('kubejs:flaring_heart', 20 * 4, amplifier + 1);
-                }
-            }
+    let count = player.persistentData.getInt(resourceCount) ?? 0
+    let maxcount = player.persistentData.getInt(resourceCountMax) ?? defaultResourceMax
+    if (count < 50)return
+        if (count >= 150 && count >= maxcount * 0.8){
+            updateResourceCount(player, count - 150)
+            player.potionEffects.add('kubejs:flaring_heart', 20 * 2, 2)
         }
-        else {
-            player.potionEffects.add('kubejs:flaring_heart', 20 * 4, 0);
+        if (count > 100 && 0.5 * maxcount < count && count < maxcount * 0.8){
+            updateResourceCount(player, count - 100)
+            player.potionEffects.add('kubejs:flaring_heart', 20 * 2, 1)
         }
-        updateResourceCount(event.entity, count - 10);
-    }
+        if (50 <= count && count <= maxcount * 0.5){
+            updateResourceCount(player, count - 50)
+            player.potionEffects.add('kubejs:flaring_heart', 20 * 2, 0)
+        }
+
 },
 //纳米修复昆虫
     'hpdlc:nanorepair_insect':function(event,organ){
@@ -434,9 +427,17 @@ const hpdlcOrganPlayerTickOnlyStrategies = {
         })
         player.setFeetArmorItem(player.getFeetArmorItem().enchant(name,level + 1))
     }
-})
-
-    
+})  
 },
+ //喷气推进器（升级改良)
+'hpdlc:jet_propeller_gai': function (event,organ) {
+    let player = event.entity
+    let count = player.persistentData.getInt(resourceCount)
+    if (player.abilities.flying){
+        updateResourceCount(player, count - 30)
+    }
+},
+
+
 }
 var assign_organ_player_tick_only = Object.assign(organPlayerTickOnlyStrategies, hpdlcOrganPlayerTickOnlyStrategies);

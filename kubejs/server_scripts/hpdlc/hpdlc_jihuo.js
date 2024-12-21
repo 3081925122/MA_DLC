@@ -218,17 +218,17 @@ const hpdlcorganActiveOnlyStrategies = {
 },
     //龙炎动力臂
     'hpdlc:fire_steam_powered_mechanical_arm': function (player, organ, attributeMap) {
-        let a = maGetComputingPower(player)
+        let a = maGetComputingPower(player)??0
         attributeMapValueAddition(attributeMap, global.ATTACK_UP_MULTI_BASE, a * 0.05)
 },
     //凋零动力臂
     'hpdlc:storm_steam_powered_mechanical_arm': function (player, organ, attributeMap) {
-        let a = maGetComputingPower(player)
+        let a = maGetComputingPower(player)??0
         attributeMapValueAddition(attributeMap, global.ATTACK_UP_MULTI_BASE, a * 0.1)
 },
     //麦乐鸡全家桶
     'hpdlc:chicken_family': function (player, organ, attributeMap) {
-        let a = mafoodGetComputingPower(player)
+        let a = mafoodGetComputingPower(player)??0
         attributeMapValueAddition(attributeMap, global.HEALTH_UP, a * 5)
         attributeMapValueAddition(attributeMap, global.ATTACK_UP_MULTI_BASE, a * 0.2)
 },

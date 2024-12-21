@@ -384,6 +384,7 @@ StartupEvents.registry('item', event => {
     .tag('kubejs:machine')
     .tag('kubejs:resource')
     .tag('kubejs:active')
+    .tag('kubejs:player_tick_only')
 
     //魔力转化器 
      registerOrgan(new Organ('hpdlc:magic_monverter')
@@ -410,6 +411,8 @@ StartupEvents.registry('item', event => {
     .addTextLines('alt',[LEADING_SYMBOL,Text.gray({"translate":"hpdlc.tooltips.jixiefeisheng"})])
     .addTextLines('default',[Text.gray({"translate":"hpdlc.tooltips.small_burning_heart.1"})])
     .addTextLines('alt',[LEADING_SYMBOL,Text.gray({"translate":"hpdlc.tooltips.small_burning_heart.2"})])
+    .addTextLines('alt',[LEADING_SYMBOL,Text.gray({"translate":"hpdlc.tooltips.small_burning_heart.3"})])
+    .addTextLines('alt',[LEADING_SYMBOL,Text.gray({"translate":"hpdlc.tooltips.small_burning_heart.4"})])
     .build())
     .tag('itemborders:iron')
     .tag('kubejs:machine')
@@ -1142,5 +1145,23 @@ StartupEvents.registry('item', event => {
         .build())
         .tag('kubejs:player_tick_only')
         .tag('kubejs:hpdlc_curse')
+        .tag('kubejs:relics');
+    
+    //风暴金属板
+    registerOrgan(new Organ('hpdlc:storm_metal_plate1')
+        .addScore('health', 0.5)
+        .addScore('nerves', 0.5)
+        .addScore('breath_recovery', 0.5)
+        .addScore('strength', 0.5)
+        .addScore('filtration', 0.5)
+        .addScore('detoxification', 0.5)
+        .addScore('defense', 0.25)
+        .addScore('nutrition', 0.25)
+        .addScore('endurance', 0.5)
+        .addScore('digestion', 0.25)
+        .addScore('metabolism', 0.5)
+        .addScore('breath_capacity', 0.5)
+        .addScore('speed', 0.5)
+        .build())
         .tag('kubejs:relics');
 })

@@ -154,9 +154,10 @@ event.recipes.create.sequenced_assembly([
 ]).transitionalItem(incomplete).loops(3)
 
 //风暴合金
+if ("kubejs:storm_metal_plate"){
 event.recipes.create.sequenced_assembly([
   Item.of('hpdlc:storm_metal_ingot')
-],'kubejs:hpdlc_storm_metal_plate',[
+],'kubejs:storm_metal_plate',[
   create.deploying(incomplete,[incomplete,'iceandfire:dragonsteel_ice_ingot']),
   create.deploying(incomplete,[incomplete,'iceandfire:dragonsteel_fire_ingot']),
   create.deploying(incomplete,[incomplete,'iceandfire:dragonsteel_lightning_ingot']),
@@ -165,7 +166,21 @@ event.recipes.create.sequenced_assembly([
   create.deploying(incomplete,[incomplete,'cataclysm:witherite_ingot']),
   create.deploying(incomplete,[incomplete,'irons_spellbooks:arcane_ingot']),
   create.deploying(incomplete,[incomplete,'cataclysm:ignitium_ingot']),
-]).transitionalItem(incomplete).loops(3)
+]).transitionalItem(incomplete).loops(3)}
+
+//风暴合金
+event.recipes.create.sequenced_assembly([
+  Item.of('hpdlc:storm_metal_ingot')
+  ],'hpdlc:storm_metal_plate1',[
+    create.deploying(incomplete,[incomplete,'iceandfire:dragonsteel_ice_ingot']),
+    create.deploying(incomplete,[incomplete,'iceandfire:dragonsteel_fire_ingot']),
+    create.deploying(incomplete,[incomplete,'iceandfire:dragonsteel_lightning_ingot']),
+    create.deploying(incomplete,[incomplete,'cataclysm:ancient_metal_ingot']),
+    create.deploying(incomplete,[incomplete,'art_of_forging:endsteel_ingot']),
+    create.deploying(incomplete,[incomplete,'cataclysm:witherite_ingot']),
+    create.deploying(incomplete,[incomplete,'irons_spellbooks:arcane_ingot']),
+    create.deploying(incomplete,[incomplete,'cataclysm:ignitium_ingot']),
+  ]).transitionalItem(incomplete).loops(3)
 
 //魔力转化器
 create.mechanical_crafting('hpdlc:magic_monverter',
@@ -306,6 +321,7 @@ create.mechanical_crafting('hpdlc:charged_totem_of_undying',
   }
 )
 //新生维度
+if ("hpdlc:withered_nether_star1" && "kubejs:storm_metal_plate"){
 create.mechanical_crafting(Item.of('hpdlc:newborn_dimension', '{hpdlcforgeTimes:0.0d}'),
   [
     'AAA',
@@ -314,7 +330,19 @@ create.mechanical_crafting(Item.of('hpdlc:newborn_dimension', '{hpdlcforgeTimes:
   ],
   {
     B:'witherstormmod:withered_nether_star',
-    A:'kubejs:hpdlc_storm_metal_plate',
+    A:'kubejs:storm_metal_plate',
+  }
+)}
+//新生维度
+create.mechanical_crafting(Item.of('hpdlc:newborn_dimension', '{hpdlcforgeTimes:0.0d}'),
+  [
+    'AAA',
+    'ABA',
+    'AAA'
+  ],
+  {
+    B:'hpdlc:withered_nether_star1',
+    A:'hpdlc:storm_metal_plate1',
   }
 )
 //粉碎机
