@@ -1059,7 +1059,7 @@ StartupEvents.registry('item', event => {
         .addTextLines('default',[Text.gray({"translate":"hpdlc.tooltips.primordial_hungry.1"})])
         .addTextLines('alt', [LEADING_SYMBOL, Text.gray({ "translate": "hpdlc.tooltips.primordial_hungry.2" })])
         .addTextLines('alt', [LEADING_SYMBOL, Text.gray({ "translate": "hpdlc.tooltips.primordial_hungry.3" })])
-        .addTextLines('altE', [LEADING_SYMBOL, Text.gray({ "translate": "hpdlc.tooltips.primordial_hungry.4" })])
+        .addTextLines('alt', [LEADING_SYMBOL, Text.gray({ "translate": "hpdlc.tooltips.primordial_hungry.4" })])
         .addTextLines('alt', [LEADING_SYMBOL, Text.gray({ "translate": "hpdlc.tooltips.primordial_hungry.5" })])
         .addTextLines('alt', [LEADING_SYMBOL, Text.gray({ "translate": "hpdlc.tooltips.primordial_hungry.6" })])
         .build())
